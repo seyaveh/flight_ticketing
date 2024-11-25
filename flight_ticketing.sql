@@ -28,3 +28,22 @@ VALUES (5, 'Admin', 'User', TO_DATE('1980-11-11', 'YYYY-MM-DD'), 'admin@example.
 
 
 SELECT * FROM Passenger;
+
+
+CREATE TABLE Baggage (
+    BaggageID INT AUTO_INCREMENT PRIMARY KEY,
+    BookingID INT NOT NULL,
+    Weight DECIMAL(5, 2),
+    Type VARCHAR(20),
+    Status VARCHAR(20),
+    FOREIGN KEY (BookingID) REFERENCES Booking(BookingID)
+);
+
+CREATE TABLE Payment (
+    PaymentID INT AUTO_INCREMENT PRIMARY KEY,
+    BookingID INT NOT NULL,
+    Amount DECIMAL(10, 2),
+    PaymentMethod VARCHAR(50),
+    PaymentDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (BookingID) REFERENCES Booking(BookingID)
+);
