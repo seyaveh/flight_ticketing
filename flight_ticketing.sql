@@ -47,3 +47,17 @@ CREATE TABLE Payment (
     PaymentDate DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (BookingID) REFERENCES Booking(BookingID)
 );
+
+INSERT INTO Airlines (AirlineName, Country) VALUES
+('Ghana Airways', 'Ghana'),
+('Delta Airlines', 'USA'),
+('British Airways', 'UK'),
+('Emirates', 'UAE'),
+('Turkish Airlines', 'Turkey');
+
+INSERT INTO Airports (AirportName, City, Country) VALUES
+('Kotoka International Airport', 'Accra', 'Ghana'),
+('Heathrow Airport', 'London', 'UK'),
+('Hartsfield-Jackson Atlanta International', 'Atlanta', 'USA'),
+('Dubai International Airport', 'Dubai', 'UAE'),
+('Istanbul Airport', 'Istanbul', 'Turkey');
