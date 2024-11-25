@@ -111,4 +111,4 @@ INSERT INTO Tickets (BookingID, SeatID, IssueDate, Price, Status) VALUES
 (2, 4, SYSDATE, 1500.00, 'Active'),
 (3, 5, SYSDATE, 1000.00, 'Active');
 
-
+       
