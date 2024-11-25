@@ -61,6 +61,17 @@ CREATE TABLE Seats (
 );
 
 
+-- View Schema
+DESCRIBE Passenger;
+DESCRIBE Booking;
+DESCRIBE Flights;
+DESCRIBE Baggage;
+DESCRIBE Payment;
+DESCRIBE Seats;
+
+
+
+--Data Insertion
 INSERT INTO Passenger (PassengerID, FirstName, LastName, DateOfBirth, Email, PhoneNumber, PassportNumber, Nationality, Gender) 
 VALUES (1, 'John', 'Doe', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'john.doe@example.com', '1234567890', 'A12345678', 'American', 'M');
 
@@ -100,5 +111,4 @@ INSERT INTO Tickets (BookingID, SeatID, IssueDate, Price, Status) VALUES
 (2, 4, SYSDATE, 1500.00, 'Active'),
 (3, 5, SYSDATE, 1000.00, 'Active');
 
-SELECT * FROM Passenger;
 
