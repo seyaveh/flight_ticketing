@@ -11,9 +11,6 @@ CREATE TABLE Passenger (
 );
 
 
-DESCRIBE Passenger;
-
-
 INSERT INTO Passenger (PassengerID, FirstName, LastName, DateOfBirth, Email, PhoneNumber, PassportNumber, Nationality, Gender) 
 VALUES (1, 'John', 'Doe', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 'john.doe@example.com', '1234567890', 'A12345678', 'American', 'M');
 
