@@ -19,11 +19,21 @@ CREATE TABLE Booking (
 );
 
 -- Create the Flights table
+<<<<<<< Updated upstream
 CREATE TABLE Airport (
     Airport PRIMARY KEY,
     City NOT NULL,
     Country VARCHAR
     
+=======
+CREATE TABLE Flights (
+    FlightID NUMBER PRIMARY KEY,
+    FlightNumber VARCHAR2(10) NOT NULL,
+    DepartureCity VARCHAR2(50),
+    ArrivalCity VARCHAR2(50),=
+    DepartureTime TIMESTAMP,
+    ArrivalTime TIMESTAMP
+>>>>>>> Stashed changes
 );
 
 -- Create the Baggage table
