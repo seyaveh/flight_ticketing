@@ -13,6 +13,7 @@ CREATE TABLE Passenger (
 
 -- Create the Booking table
 CREATE TABLE Booking (
+   BookingID INT PRIMARY KEY,
    BookingDate DATE, 
    Status VARCHAR2(20) NOT NULL, 
    TotalCost INT,
@@ -58,23 +59,23 @@ INSERT INTO Passenger (PassengerID, FirstName, LastName, PhoneNumber, PassportNu
 VALUES (4, 'Ama', 'Boateng', '233507', 'D234', 'Ghanaian', 'F');
 
 INSERT INTO Passenger (PassengerID, FirstName, LastName, PhoneNumber, PassportNumber, Nationality, Gender) 
-VALUES (5, 'Seyram', 'Avey', '11223', 'E987', 'American', 'M');
+VALUES (5, 'Seyram', 'Avey', '11223', 'E987', 'American', 'F');
 
 --insert data into booking table
-INSERT INTO Booking (BookingDate, Status, TotalCost, PassengerID) 
-VALUES (TO_DATE('2024-10-01', 'YYYY-MM-DD'), 'Confirmed', 299.99, 1);
+INSERT INTO Booking (BookingID, BookingDate, Status, TotalCost, PassengerID) 
+VALUES (1, TO_DATE('2024-11-24','YY-MM-DD'), 'Confirmed', 499.00, 2);
 
-INSERT INTO Booking (BookingDate, Status, TotalCost, PassengerID) 
-VALUES (TO_DATE('2024-11-24', 'YYYY-MM-DD'), 'Confirmed', 499.00, 2);
+INSERT INTO Booking (BookingID, BookingDate, Status, TotalCost, PassengerID) 
+VALUES (2, TO_DATE('2024-11-24','YY-MM-DD'), 'Confirmed', 499.00, 2);
 
-INSERT INTO Booking (BookingDate, Status, TotalCost, PassengerID) 
-VALUES (TO_DATE('2024-11-12', 'YYYY-MM-DD'), 'Confirmed', 629.99, 3);
+INSERT INTO Booking (BookingID, BookingDate, Status, TotalCost, PassengerID) 
+VALUES (3, TO_DATE('2024-11-12', 'YYYY-MM-DD'), 'Confirmed', 629.99, 3);
 
-INSERT INTO Booking (BookingDate, Status, TotalCost, PassengerID) 
-VALUES (TO_DATE('2024-11-30', 'YYYY-MM-DD'), 'Confirmed', 399.00, 4);
+INSERT INTO Booking (BookingID, BookingDate, Status, TotalCost, PassengerID) 
+VALUES (4, TO_DATE('2024-11-30', 'YYYY-MM-DD'), 'Confirmed', 399.00, 4);
 
-INSERT INTO Booking (BookingDate, Status, TotalCost, PassengerID) 
-VALUES (TO_DATE('2024-11-29', 'YYYY-MM-DD'), 'Pending', 789.99, 5);
+INSERT INTO Booking (BookingID, BookingDate, Status, TotalCost, PassengerID) 
+VALUES (5, TO_DATE('2024-11-29', 'YYYY-MM-DD'), 'Pending', 789.99, 5);
 
 -- Insert data into Airlines table
 INSERT INTO Airlines (AirlineName, Country) 
@@ -110,21 +111,21 @@ VALUES ('Istanbul Airport', 'Istanbul', 'Turkey');
 
 -- Insert data into Payment table
 INSERT INTO Payment (PaymentID, BookingID, Amount, PaymentMethod, PaymentDate) 
-VALUES (1, TO_DATE('2024-10-01', 'YYYY-MM-DD'), 1200.00, 'Active', SYSDATE);
+VALUES (1, TO_DATE('2024-10-01', 'YYYY-MM-DD'), 1200.00, 'CASH', SYSDATE);
 
 INSERT INTO Payment (PaymentID, BookingID, Amount, PaymentMethod, PaymentDate) 
-VALUES (2, TO_DATE('2024-11-24', 'YYYY-MM-DD'), 1200.00, 'Active', SYSDATE);
+VALUES (2, TO_DATE('2024-11-24', 'YYYY-MM-DD'), 1200.00, 'DEBIT CARD', SYSDATE);
 
 INSERT INTO Payment (PaymentID, BookingID, Amount, PaymentMethod, PaymentDate) 
-VALUES (3, TO_DATE('2024-11-12', 'YYYY-MM-DD'), 1500.00, 'Active', SYSDATE);
+VALUES (3, TO_DATE('2024-11-12', 'YYYY-MM-DD'), 1500.00, 'CASH', SYSDATE);
 
 INSERT INTO Payment (PaymentID, BookingID, Amount, PaymentMethod, PaymentDate) 
-VALUES (4, TO_DATE('2024-11-30', 'YYYY-MM-DD'), 1500.00, 'Active', SYSDATE);
+VALUES (4, TO_DATE('2024-11-30', 'YYYY-MM-DD'), 1500.00, 'CASH', SYSDATE);
 
 INSERT INTO Payment (PaymentID, BookingID, Amount, PaymentMethod, PaymentDate) 
-VALUES (5, TO_DATE('2024-11-29', 'YYYY-MM-DD'), 1000.00, 'Active', SYSDATE);
+VALUES (5, TO_DATE('2024-11-29', 'YYYY-MM-DD'), 1000.00, 'DEBIT CARD', SYSDATE);
 
-
+-- A built-in function in Oracle SQL that retrieves the current date and time of the system
 
 
 --print the tables
